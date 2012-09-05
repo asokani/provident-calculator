@@ -14,30 +14,35 @@
     <script src="calculator.js"></script>
 </head>
 <body>
-    <header>
-        <a href="" title="Provident Financial s.r.o" id="logo">
-            <img src="" alt="Provident Financial s.r.o" title="Provident Financial s.r.o" />
-        </a>
-        <a href="" title="">Provident</a>
-    </header>
-    <form>
-        <div>
-            Výše půjčky:
-            <select name="issue-value">
-            </select>
-        </div>
-        <div>
-            Doba splácení:
-            <select name="pay-period">
-            </select>
-        </div>
-        <div>
-            Týdenní splátka: <span id="instalment"></span>
-        </div>
-        <div>
-            Celkem ke splacení: <span id="total"></span>
-        </div>
+    <div id="content">
+        <header>
+            <a target="_top" href="http://www.provident.cz" title="Provident Financial s.r.o" id="logo">
+                <img src="provident.png" width="128" height="28" alt="Provident Financial s.r.o" title="Provident Financial s.r.o" />
+            </a>
+            <a target="_top" id="calculator-link" href="http://www.provident.cz/pages/online-kalkulacka" title="Provident kalkulačka">detailní<br>výpočet</a>
+        </header>
+        <form class="clearfix">
+            <div>
+                Výše půjčky:
+                <select name="issue-value">
+                </select>
+            </div>
+            <div>
+                Doba splácení:
+                <select name="pay-period">
+                </select>
+            </div>
+            <div>
+                RPSN: <strong><span id="apr"></span></strong>
+            </div>
+            <div>
+                Týdenní splátka: <strong><span id="instalment"></span></strong>
+            </div>
+            <div>
+                Celkem ke splacení: <strong><span id="total"></span></strong>
+            </div>
 
-    </form>
+        </form>
+    </div>
 </body>
 </html>
