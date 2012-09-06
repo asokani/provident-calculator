@@ -12,14 +12,36 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <link rel="stylesheet" href="calculator.css">
     <script src="calculator.js"></script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-34658815-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+    <script type="text/javascript">
+        function outboundLink(link, category, action) {
+            try {
+                _gaq.push(['_trackEvent', category , action ]);
+            }catch(err){}
+        }
+    </script>
 </head>
 <body>
     <div id="content">
         <header>
-            <a target="_top" href="http://www.provident.cz" title="Provident Financial s.r.o" id="logo">
+            <a target="_blank" href="http://www.provident.cz" title="Provident Financial s.r.o" id="logo"
+               onClick="outboundLink(this, 'Outbound Links', 'www.provident.cz');">
                 <img src="provident.png" width="91" height="20" alt="Provident Financial s.r.o" title="Provident Financial s.r.o" />
             </a>
-            <a target="_top" id="calculator-link" href="http://www.provident.cz/pages/online-kalkulacka" title="Provident kalkulačka">detailní výpočet</a>
+            <a target="_blank" id="calculator-link" href="http://www.provident.cz/pages/online-kalkulacka"
+               title="Provident kalkulačka" onClick="outboundLink(this, 'Outbound Links', 'www.provident.cz/pages/online-kalkulacka');">detailní výpočet</a>
         </header>
         <div class="tooltips">
             <div class="tooltip" data-type="issue-value" style="display: none;">
