@@ -17,31 +17,61 @@
     <div id="content">
         <header>
             <a target="_top" href="http://www.provident.cz" title="Provident Financial s.r.o" id="logo">
-                <img src="provident.png" width="128" height="28" alt="Provident Financial s.r.o" title="Provident Financial s.r.o" />
+                <img src="provident.png" width="91" height="20" alt="Provident Financial s.r.o" title="Provident Financial s.r.o" />
             </a>
-            <a target="_top" id="calculator-link" href="http://www.provident.cz/pages/online-kalkulacka" title="Provident kalkulačka">detailní<br>výpočet</a>
+            <a target="_top" id="calculator-link" href="http://www.provident.cz/pages/online-kalkulacka" title="Provident kalkulačka">detailní výpočet</a>
         </header>
+        <div class="tooltips">
+            <div class="tooltip" data-type="issue-value" style="display: none;">
+                Částka, kterou si přejete půjčit
+            </div>
+            <div class="tooltip" data-type="pay-period" style="display: none;">
+                Počet týdnů - období, ve kterém si přejete půjčku splácet.
+            </div>
+            <div class="tooltip" data-type="rpsn" style="display: none;">
+                RPSN = Roční procentuální sazba nákladů.
+            </div>
+            <div class="tooltip" data-type="instalment" style="display: none;">
+                Poslední splátka<br>
+                <strong><span id="instalment-last"></span></strong>
+            </div>
+            <div class="tooltip" data-type="fees" style="display: none;">
+                Poplatek za zpracování<br>
+                <strong><span id="fee"></span></strong><br>
+                Úrok<br>
+                <strong><span id="interest"></span></strong><br>
+                Roční fixní úroková sazba<br>
+                <strong><span id="rate"></span></strong>
+            </div>
+            <div class="tooltip" data-type="total" style="display: none;">
+                Celková splatná částka
+            </div>
+        </div>
         <form class="clearfix">
-            <div>
-                Výše půjčky:
-                <select name="issue-value">
-                </select>
+            <div class="cols clearfix">
+                <div class="row">
+                    Výše půjčky <a href="#" class="question" data-type="issue-value"></a>
+                    <select name="issue-value">
+                    </select>
+                </div>
+                <div class="row">
+                    Doba splácení <a href="#" class="question" data-type="pay-period"></a>
+                    <select name="pay-period">
+                    </select>
+                </div>
             </div>
             <div>
-                Doba splácení:
-                <select name="pay-period">
-                </select>
+                RPSN: <strong><span id="apr"></span></strong> <a href="#" class="question" data-type="rpsn"></a>
             </div>
             <div>
-                RPSN: <strong><span id="apr"></span></strong>
+                Týdenní splátka: <strong><span id="instalment"></span></strong> <a href="#" class="question" data-type="instalment"></a>
             </div>
             <div>
-                Týdenní splátka: <strong><span id="instalment"></span></strong>
+                Celkové náklady: <strong><span id="fees"></span></strong> <a href="#" class="question" data-type="fees"></a>
             </div>
             <div>
-                Celkem ke splacení: <strong><span id="total"></span></strong>
+                Celkem ke splacení: <strong><span id="total"></span></strong> <a href="#" class="question" data-type="total"></a>
             </div>
-
         </form>
     </div>
 </body>

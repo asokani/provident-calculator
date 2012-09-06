@@ -81,8 +81,6 @@ a:hover {
 #content {
     width: 206px;
     height: 136px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
     border-radius: 5px;
     background: #01509D;
     padding: 7px;
@@ -97,22 +95,62 @@ a:hover {
     float: right;
     display: block;
     line-height: 13px;
+    padding: 2px 2px 0 0;
 }
 
 form {
     clear: both;
-    padding-top: 12px;
+    padding-top: 6px;
 }
 
 .lt-ie8 form {
-    padding-top: 7px;
+    padding-top: 0px;
+}
+
+.lt-ie8 .question {
+    display: none;
 }
 
 form div {
     padding: 1px 0;
 }
 
+form .cols {
+    position: relative;
+}
 
+form .row {
+    float: left;
+    width: 50%;
+}
+
+a.question {
+    width: 12px;
+    height: 12px;
+    background: url(question.png) no-repeat;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+}
+
+.tooltips {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.tooltip {
+    position: absolute;
+    display: none;
+    padding: 3px 5px;
+    border:1px solid #01509D;
+    margin: 0;
+    font-size: 10px;
+    background: #EEEEEE;
+    color: black;
+    z-index: 1000;
+    border-radius: 3px;
+    line-height: 13px;
+}
 
 
 
