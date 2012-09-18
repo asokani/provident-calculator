@@ -79,60 +79,77 @@ a:hover {
 }
 
 #content {
-    width: 206px;
-    height: 136px;
+    width: 220px;
+    height: 150px;
     border-radius: 5px;
     background: #01509D;
-    padding: 7px;
+    padding: 0px;
     overflow: hidden;
 }
-
+#header {
+    background: url("pebble.jpg") top right no-repeat;
+    padding: 1px;
+    height: 30px;
+    overflow: hidden;
+}
 #logo {
     float: left;
+    margin: 5px 0 0 4px;
 }
 
 #calculator-link {
     float: right;
     display: block;
     line-height: 13px;
-    padding: 2px 2px 0 0;
+    padding: 5px 7px 0 0;
 }
 
 form {
     clear: both;
-    padding-top: 6px;
+    padding: 0px;
+    background: #ecf6ff;
+    border: 1px solid #01509D;
+    border-top: none;
+    border-bottom: none;
 }
-
-.lt-ie8 form {
-    padding-top: 0px;
+form table {
+    border-collapse: collapse;
+    border:none;
+    width: 100%;
+    margin: 2px 0;
+}
+form table td {
+    text-align: center;
+    color: #3475ad;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 0;
+    border: none;
+}
+#instalment {
+    color: #f20704;
+    font-size: 15px;
 }
 
 .lt-ie8 .question {
     display: none;
 }
 
-form div {
-    padding: 1px 0;
-}
-
-form .cols {
-    position: relative;
-}
-
-form .row {
-    float: left;
-    width: 50%;
-}
-
 a.question {
-    width: 12px;
-    height: 12px;
-    background: url(question.png) no-repeat;
+    width: 9px;
+    height: 9px;
+    background: url(pebble-dark.jpg) no-repeat;
     display: inline-block;
     position: relative;
-    top: 2px;
+    top: 1px;
 }
 
+form a.question {
+    width: 11px;
+    height: 11px;
+    background: url(pebble-light.jpg) no-repeat;
+    top: 2px;
+}
 .tooltips {
     position: absolute;
     left: 0;
@@ -152,7 +169,11 @@ a.question {
     line-height: 13px;
 }
 
-
+#footer {
+    font-size: 9px;
+    padding: 4px;
+    line-height: 12px;
+}
 
 .ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
 .ir br { display: none; }

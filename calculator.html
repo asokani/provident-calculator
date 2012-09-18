@@ -35,14 +35,14 @@
 </head>
 <body>
     <div id="content">
-        <header>
+        <div id="header" class="clearfix">
             <a target="_blank" href="http://www.provident.cz" title="Provident Financial s.r.o" id="logo"
                onClick="outboundLink(this, 'Outbound Links', 'www.provident.cz');">
                 <img src="provident.png" width="91" height="20" alt="Provident Financial s.r.o" title="Provident Financial s.r.o" />
             </a>
             <a target="_blank" id="calculator-link" href="http://www.provident.cz/pages/online-kalkulacka"
                title="Provident kalkulačka" onClick="outboundLink(this, 'Outbound Links', 'www.provident.cz/pages/online-kalkulacka');">detailní výpočet</a>
-        </header>
+        </div>
         <div class="tooltips">
             <div class="tooltip" data-type="issue-value" style="display: none;">
                 Částka, kterou si přejete půjčit
@@ -58,6 +58,7 @@
                 <strong><span id="instalment-last"></span></strong>
             </div>
             <div class="tooltip" data-type="fees" style="display: none;">
+                <strong>Celkové náklady</strong><br>
                 Poplatek za zpracování<br>
                 <strong><span id="fee"></span></strong><br>
                 Úrok<br>
@@ -70,31 +71,51 @@
             </div>
         </div>
         <form class="clearfix">
-            <div class="cols clearfix">
-                <div class="row">
-                    Výše půjčky <a href="#" class="question" data-type="issue-value"></a>
-                    <select name="issue-value">
-                    </select>
-                </div>
-                <div class="row">
-                    Doba splácení <a href="#" class="question" data-type="pay-period"></a>
-                    <select name="pay-period">
-                    </select>
-                </div>
-            </div>
-            <div>
-                RPSN: <strong><span id="apr"></span></strong> <a href="#" class="question" data-type="rpsn"></a>
-            </div>
-            <div>
-                Týdenní splátka: <strong><span id="instalment"></span></strong> <a href="#" class="question" data-type="instalment"></a>
-            </div>
-            <div>
-                Celkové náklady: <strong><span id="fees"></span></strong> <a href="#" class="question" data-type="fees"></a>
-            </div>
-            <div>
-                Celkem ke splacení: <strong><span id="total"></span></strong> <a href="#" class="question" data-type="total"></a>
-            </div>
+            <table>
+                <tr>
+                    <td>
+                        Výše půjčky <a href="#" class="question" data-type="issue-value"></a>
+                    </td>
+                    <td>
+                        Doba splácení <a href="#" class="question" data-type="pay-period"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="issue-value">
+                        </select>
+                    </td>
+                    <td>
+                        <select name="pay-period">
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Týdenní splátka <a href="#" class="question" data-type="instalment"></a>
+                    </td>
+                    <td>
+                        Online žádost
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="instalment"></span>
+                    </td>
+                    <td>
+                        <a target="_blank" href="http://www.provident.cz/pages/online-kalkulacka" title="Chci půjčku"
+                           onClick="outboundLink(this, 'Outbound Links', 'www.provident.cz/pages/online-kalkulacka');">
+                            <img src="loan.jpg" width="99" height="19" title="Chci půjčku" alt="Chci půjčku" />
+                        </a>
+                    </td>
+                </tr>
+            </table>
         </form>
+        <div id="footer">
+            RPSN: <strong><span id="apr"></span></strong>  <a href="#" class="question" data-type="rpsn"></a>
+            Celk. náklady: <strong><span id="fees"></span></strong> <a href="#" class="question" data-type="fees"></a><br>
+            Celkem ke splacení: <strong><span id="total"></span></strong> <a href="#" class="question" data-type="total"></a>
+        </div>
     </div>
 </body>
 </html>

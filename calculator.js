@@ -196,7 +196,7 @@
       };
 
       Calculator.prototype.make_select_pay_period = function(weeks) {
-        var value, _i, _len, _results;
+        var selected, value, _i, _len, _results;
         if (weeks == null) {
           weeks = [45, 60];
         }
@@ -204,7 +204,8 @@
         _results = [];
         for (_i = 0, _len = weeks.length; _i < _len; _i++) {
           value = weeks[_i];
-          _results.push(this.select_pay_period.append($("<option value=" + value + ">" + value + " týdnů</option>")));
+          selected = value === 60 ? "selected='selected'" : '';
+          _results.push(this.select_pay_period.append($("<option value=" + value + " " + selected + ">" + value + " týdnů</option>")));
         }
         return _results;
       };

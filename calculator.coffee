@@ -167,7 +167,8 @@ jQuery ->
     make_select_pay_period: (weeks = [45, 60]) ->
       @select_pay_period.empty()
       for value in weeks
-        @select_pay_period.append($("<option value=#{value}>#{value} týdnů</option>"))
+        selected = if value == 60 then "selected='selected'" else ''
+        @select_pay_period.append($("<option value=#{value} #{selected}>#{value} týdnů</option>"))
 
     redraw: =>
       issue_value = @select_issue_value.val()
