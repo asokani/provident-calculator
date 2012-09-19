@@ -101,7 +101,8 @@ a:hover {
     float: right;
     display: block;
     line-height: 13px;
-    padding: 5px 7px 0 0;
+    padding: 7px 7px 0 0;
+    font-size: 11px;
 }
 
 form {
@@ -173,6 +174,7 @@ form a.question {
     font-size: 9px;
     padding: 4px;
     line-height: 12px;
+    color: #89b8e2;
 }
 
 .ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
