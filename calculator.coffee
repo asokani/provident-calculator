@@ -161,7 +161,7 @@ jQuery ->
 
     make_select_issue_value: ->
       for value in [4000..50000] by 1000
-        selected = if value == 25000 then "selected='selected'" else ''
+        selected = if value == 18000 then "selected='selected'" else ''
         @select_issue_value.append($("<option value=#{value} #{selected}>#{NumberFormat.format(value)} Kč</option>"))
 
     make_select_pay_period: (weeks = [45, 60]) ->
