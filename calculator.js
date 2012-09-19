@@ -189,7 +189,7 @@
         var selected, value, _i, _results;
         _results = [];
         for (value = _i = 4000; _i <= 50000; value = _i += 1000) {
-          selected = value === 25000 ? "selected='selected'" : '';
+          selected = value === 18000 ? "selected='selected'" : '';
           _results.push(this.select_issue_value.append($("<option value=" + value + " " + selected + ">" + (NumberFormat.format(value)) + " Kč</option>")));
         }
         return _results;
